@@ -1,0 +1,504 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FBF9FA;
+}
+/* стилі хедера */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap;
+    gap: 192px;
+    padding: 16px 76px;
+    background-color: #AC2E91;
+    font-family: 'PT Sans Caption', sans-serif;
+    color: #FBF9FA;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+}
+.logo span {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 32px;
+    letter-spacing: 2%;
+}
+
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 72px;
+}
+.navigation li {
+    display: inline;
+}
+.navigation a {
+    text-decoration: none;
+    color: #FBF9FA;
+    font-size: 22px; 
+    transition: font-weight 0.5s, color 0.5s;
+}
+.navigation a:hover {
+    font-weight: bold; 
+}
+.navigation a.active {
+    color: #FFD964
+}
+
+.icons {
+    display: flex;
+    margin-left: 90px;
+    gap: 26px;
+}
+.icons img {
+    transition: opacity 0.3s ease-out;
+}
+
+/* стилі рухомого рядка знижки */
+
+.sale-text {
+    font-family: 'PT Sans Caption', sans-serif;
+    color: #FBF9FA;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: default;
+}
+.sale-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #A8C653;
+    padding: 11px 0;
+    white-space: nowrap;
+    width: 100%; 
+    overflow: hidden;
+}
+.items {
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.marquee {
+    animation: scroll 13s linear infinite;
+} 
+@keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100%));
+    }
+}
+
+/* стилі візуального блоку */
+
+.vis-block{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 0 20px rgba(14, 12, 49, 0.15);
+}
+.vis-block-text {
+    text-align: left;
+    width: fit-content;
+    margin: 130px 0 0 80px;
+    min-width: 436px;
+}
+.vis-block-text h1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 68px;
+    max-width: 523px;
+}
+.subtitle{
+    width: fit-content;
+}
+.subtitle h2 {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 32px;
+    padding: 46px 0 58px;
+    max-width: 608px;
+    font-weight: 500;
+}
+.catalog-button {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 32px;
+    word-spacing: 2%;
+    padding: 24px 48px;
+    max-width: fit-content;
+    background-color: #AC2E91;
+    color: #FBF9FA;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; 
+}
+.catalog-button:hover {
+    background-color: #A8C653;
+}
+
+.heart-component {
+    position: relative;
+}
+.vis-block img {
+    height: calc(100% - 32px);
+    padding-top: 32px;
+    position: relative;
+    z-index: 1;
+}
+.sale-line2 {
+    display: flex;
+    white-space: nowrap;
+    width: 375px; 
+    overflow: hidden;
+    gap: 100px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+}
+.items2 {
+    display: flex;
+    justify-content: space-around;
+    width: 800px; 
+}
+.marquee2 {
+    animation: scroll2 5s linear infinite;
+} 
+@keyframes scroll2 {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-100% - 100px));
+    }
+}
+
+/* стилі блоків категорій та про нас */
+
+.categories_about-us_block{
+    padding-left: 80px;
+    min-height: 471px;
+}
+.category-block{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 72px 0 64px 0;
+    padding-right: 80px;
+    gap: 38px;
+}
+.category {
+    text-align: center;
+    position: relative;
+    transition: min-hight 0.3s ease-in-out;
+    
+    cursor: default;
+}
+.category:hover p {
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 141px 0;
+}
+.category img {
+    min-width: 240px;
+    border-radius: 9px;
+}
+.category p {
+    font-family: 'PT Sans Caption', sans-serif;
+    font-size: 32px;
+    color: #FBF9FA;
+    background-color: #AC2E91;
+    border-radius: 0 0 9px 9px;
+    padding: 12px 0;
+    min-height: auto;
+    margin: 0 0;
+    position: absolute; 
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    transition:  padding 0.3s ease, color 0.3s ease-in-out; 
+}
+
+.about-us-block {
+    display: flex;
+    align-items: center;
+    color: #0E0C31;
+    justify-content: space-between;
+}
+.about-us-text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+}
+.about-us-text {
+    display: flex;
+    gap: 51px;
+    align-items: center;
+}
+.about-us-accent {
+    min-width: 8px;
+    height: 268px;
+    background-color: #A8C653;
+}
+.about-us-text p {
+    font-family: 'PT Sans Caption', sans-serif;
+    color: #0E0C31;
+    font-size: 28px;
+    line-height: 1.5;
+    max-width: 858px;
+    min-width: 627px;
+}
+.about-us-text-block h2 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 56px;
+    font-weight: bold;
+    margin: 0;
+}
+.about-us-block img{
+    height: 480px;
+    max-height: 100%;
+}
+
+/* стилі блоку про нас */
+.for-you-block{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 56px;
+    padding: 64px 80px 48px 80px;
+    background-color: #CFDF9F;
+    color: #0E0C31;
+}
+.for-you-block h2{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 56px;
+    font-weight: bold;
+    margin: 0;
+    white-space: nowrap;
+}
+.for-you-items{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 188px;
+    margin: 0 46px;
+    font-family: 'PT Sans Caption', sans-serif;
+    font-size: 28px;
+    text-align: center;
+    width: 100%;;
+}
+.for-you-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 42px;
+    width: 400px;
+    min-width: 235px;
+}
+
+/* стилі каталогу */
+.catalog-block{
+    display: flex;
+    flex-direction: column;
+    padding: 64px 80px 72px 80px;
+}
+.catalog-block h2{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 56px;
+    letter-spacing: 2%;
+    margin: 0 0 48px 0;
+}
+.catalog-frame{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+    /* стилі картки товару */
+.catalog-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    height: auto;
+    padding: 0 30px 30px 30px;
+    margin-bottom: 48px;
+    border: 2px solid #908E9F;
+    border-radius: 9px;
+    background-color: #FBF9FA;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+.catalog-item:hover {
+    transform: scale(1.05); /* Збільшуємо масштаб елементу при наведенні */
+}
+.photo-text {
+    display: flex;
+    flex-direction: column;
+    font-family: 'PT Sans Caption', sans-serif;
+    color: #0E0C31;
+    font-size: 26px;
+}
+.photo-text img {
+    max-width: 340px;
+    height: auto;
+    margin: 27px 30px 8px 30px;
+}
+.photo-text p{
+    margin: 28px 0 38px 0;
+}
+.price {
+    font-family: 'PT Sans Caption', sans-serif;
+    color: #0E0C31;
+    font-size: 32px;
+    margin-bottom: 42px;
+}
+.catalog-frame button {
+    font-size: 26px;
+    color: #0E0C31;
+    margin: 0 24px;
+    padding: 19px 130px;
+    background-color: #A8C653;
+}
+.catalog-frame button:hover {
+    background-color: #AC2E91;
+    color: #FBF9FA;
+}
+
+.to-catalog{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+}
+.to-catalog a{
+    text-decoration: none;
+    color: #908E9F;
+    font-family: 'PT Sans Caption', sans-serif;
+    font-size: 28px;
+    transition: color 0.5s;
+}
+.to-catalog img {
+    transition: src 0.5s; 
+    cursor: pointer; 
+}
+/* стилі блоку відгуків */
+.reviews-block{
+    display: flex;
+    flex-direction: column;
+    background-color: #CFDF9F;
+    padding: 64px 80px 40px 76px;
+    gap: 48px;
+    overflow: hidden;
+}
+.reviews-block h2{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 56px;
+    letter-spacing: 2%;
+    margin: 0 0 48px 0;
+}
+.reviews-display{
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    overflow-x: hidden;
+    transition: transform 0.3s ease;
+}
+
+.review{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 72px;
+    padding: 32px 40px;
+    max-width: 1198px;
+    min-width: 600px;
+    background-color: #FBF9FA;
+    border-radius: 9px;
+}
+.review-data{
+    font-family: 'PT Sans Caption', sans-serif;
+    color: #0E0C31;
+    font-size: 28px;
+}
+.review-data p{
+    margin: 0;
+}
+.review-data img{
+    margin: 24px 0;
+}
+
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+.reviews-full {
+   width: 100%;
+   overflow: hidden;
+   background-color: #CFDF9F;
+}
+
+.reviews-menu {
+    display: flex;
+    justify-content: center;
+    padding-top: 39px;
+}
+
+.menu-dot {
+   width: 16px;
+   height: 16px;
+   border-radius: 16px;
+   margin: 12px;
+   cursor: pointer;
+   background-color: #0E0C31;
+   transition: all 0.4s ease;
+}
+
+.menu-dot:hover {
+   transform:scale(1.5);
+}
+
+input[name="r"] {
+   position: absolute;
+   visibility: hidden;
+}
+
+.slides {
+   width: 400%;
+   height: 100%;
+   display: flex;
+}
+
+.slide {
+    display: flex;
+    justify-content: center;
+   width: 25%;
+   transition: all 0.6s ease;
+}
+
+#r1:checked ~ .s1 {
+   margin-left: 0;
+}
+
+#r2:checked ~ .s1 {
+   margin-left: -25%;
+}
+
+#r3:checked ~ .s1 {
+   margin-left: -50%;
+}
+
+
