@@ -109,26 +109,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 500);
     });
 });
-document.addEventListener('DOMContentLoaded', function () {
-    const reviewsFrame = document.querySelector('.reviews-frame');
-    const nextArrow = document.querySelector('.reviews-menu img:last-child');
 
-    let currentSlide = 0;
-    const numSlides = reviewsFrame.children.length;
-    const slideWidth = reviewsFrame.offsetWidth; 
-
-    const totalWidth = slideWidth * numSlides;
-    reviewsFrame.style.width = totalWidth + 'px';
-
-    nextArrow.addEventListener('click', function () {
-        currentSlide++;
-        if (currentSlide >= numSlides) {
-            currentSlide = 0;
-        }
-        const offset = -currentSlide * slideWidth;
-        reviewsFrame.style.transform = `translateX(${offset}px)`;
-    });
-});
 
 
 

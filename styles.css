@@ -399,14 +399,26 @@ body {
     flex-direction: column;
     background-color: #CFDF9F;
     padding: 64px 80px 40px 76px;
-    gap: 48px;
     overflow: hidden;
+    position: relative;
 }
 .reviews-block h2{
     font-family: 'Ubuntu', sans-serif;
     font-size: 56px;
     letter-spacing: 2%;
     margin: 0 0 48px 0;
+}
+.cloud-1 {
+    position: absolute;
+    top: 149px;
+    right: 0;
+    z-index: 1;
+}
+.cloud-2 {
+    position: absolute;
+    bottom: 34px;
+    left: 0;
+    z-index: 1;
 }
 .reviews-display{
     display: flex;
@@ -415,7 +427,6 @@ body {
     overflow-x: hidden;
     transition: transform 0.3s ease;
 }
-
 .review{
     display: flex;
     flex-direction: row;
@@ -439,24 +450,21 @@ body {
     margin: 24px 0;
 }
 
-
 * {
    margin: 0;
    padding: 0;
 }
-
 .reviews-full {
    width: 100%;
    overflow: hidden;
    background-color: #CFDF9F;
+   position: relative;
 }
-
 .reviews-menu {
     display: flex;
     justify-content: center;
     padding-top: 39px;
 }
-
 .menu-dot {
    width: 16px;
    height: 16px;
@@ -466,39 +474,91 @@ body {
    background-color: #0E0C31;
    transition: all 0.4s ease;
 }
-
 .menu-dot:hover {
    transform:scale(1.5);
 }
-
 input[name="r"] {
    position: absolute;
    visibility: hidden;
 }
-
 .slides {
    width: 400%;
    height: 100%;
    display: flex;
 }
-
 .slide {
     display: flex;
     justify-content: center;
    width: 25%;
    transition: all 0.6s ease;
 }
-
 #r1:checked ~ .s1 {
    margin-left: 0;
 }
-
 #r2:checked ~ .s1 {
    margin-left: -25%;
 }
-
 #r3:checked ~ .s1 {
    margin-left: -50%;
 }
 
+/* стилі блоку додати відгук */
+.add-review-block{
+    display: flex;
+    flex-direction: column;
+    padding: 64px 80px 82px 80px;
+}
+.add-review-block h2{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 56px;
+}
+.fields-frame{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 60px 0;
+}
+.fields-frame input[type="text"],
+.fields-frame textarea {
+    width: 100%;
+    padding: 16px 32px;
+    font-family: 'PT Sans Caption', sans-serif;
+    font-size: 28px;
+    border: 2px solid #908E9F;
+    border-radius: 9px;
+}
+.fields-frame input[type="text"]:hover,
+.fields-frame textarea:hover,
+.fields-frame input[type="text"]:focus,
+.fields-frame textarea:focus {
+    border-color: #AC2E91; 
+}
+.fields-frame input[type="text"]:focus + placeholder,
+.fields-frame textarea:focus + placeholder{
+    border-color: #AC2E91;
+    height: 30px;
+    line-height: 30px;
+    transform: translate(-15px, -16px);
+}
 
+.fields-frame textarea {
+    min-height: 413px; 
+}
+.add-review-block button {
+    font-size: 28px;
+    color: #FBF9FA;
+    margin: 0 24px;
+    padding: 24px 48px;
+    background-color: #AC2E91;
+}
+.add-review-block button:hover {
+    background-color: #A8C653;
+}
+
+
+
+.fields-frame input[type="text"]:focus + placeholder,
+.fields-frame input[type="text"]:valid + placeholder{
+    border-color: #AC2E91;
+    transform: translate(4px, -14px) scale(0.8);
+}
