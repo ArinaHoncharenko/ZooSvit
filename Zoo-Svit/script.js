@@ -13,9 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 document.addEventListener('DOMContentLoaded', function () {
-    const cartIcon = document.getElementById('cart-icon');
-    const instagramIcon = document.getElementById('instagram-icon');
-    const iconsContainer = document.querySelector('.icons');
+    const icons = document.querySelectorAll('.icon');
 
     function changeIcon(icon, newSrc, delay) {
         const originalSrc = icon.src;
@@ -25,28 +23,18 @@ document.addEventListener('DOMContentLoaded', function () {
         }, delay);
     }
 
-    cartIcon.addEventListener('mouseover', function () {
-        cartIcon.src = '/images/cart-icon-bold.png';
-    });
+    icons.forEach(function(icon) {
+        icon.addEventListener('mouseover', function () {
+            icon.src = '/images/' + icon.id + '-bold.png';
+        });
 
-    instagramIcon.addEventListener('mouseover', function () {
-        instagramIcon.src = '/images/instagram-icon-bold.png';
-    });
+        icon.addEventListener('mouseout', function () {
+            icon.src = '/images/' + icon.id + '.png';
+        });
 
-    cartIcon.addEventListener('mouseout', function () {
-        cartIcon.src = '/images/cart-icon.png';
-    });
-
-    instagramIcon.addEventListener('mouseout', function () {
-        instagramIcon.src = '/images/instagram-icon.png';
-    });
-
-    cartIcon.addEventListener('click', function () {
-        changeIcon(cartIcon, '/images/cart-icon-bold-yellow.png', 500);
-    });
-
-    instagramIcon.addEventListener('click', function () {
-        changeIcon(instagramIcon, '/images/instagram-icon-bold-yellow.png', 500);
+        icon.addEventListener('click', function () {
+            changeIcon(icon, '/images/' + icon.id + '-bold-yellow.png', 500);
+        });
     });
 });
 document.addEventListener('DOMContentLoaded', function () {
@@ -110,25 +98,56 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 document.addEventListener('DOMContentLoaded', function () {
-    const reviewsFrame = document.querySelector('.reviews-frame');
-    const nextArrow = document.querySelector('.reviews-menu img:last-child');
+    const categoryLinks = document.querySelectorAll('.to-category-link');
+    const aboutUsBlock = document.querySelector('.categories_about-us_block');
 
-    let currentSlide = 0;
-    const numSlides = reviewsFrame.children.length;
-    const slideWidth = reviewsFrame.offsetWidth; 
+    categoryLinks.forEach(function(link) {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            aboutUsBlock.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
 
-    const totalWidth = slideWidth * numSlides;
-    reviewsFrame.style.width = totalWidth + 'px';
+    const reviewLinks = document.querySelectorAll('.to-reviews-link');
+    const reviewBlock = document.querySelector('.reviews-block');
 
-    nextArrow.addEventListener('click', function () {
-        currentSlide++;
-        if (currentSlide >= numSlides) {
-            currentSlide = 0;
-        }
-        const offset = -currentSlide * slideWidth;
-        reviewsFrame.style.transform = `translateX(${offset}px)`;
+    reviewLinks.forEach(function(link) {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            reviewBlock.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+    const catalogLinks = document.querySelectorAll('.to-catalog-link');
+    const catalogBlock = document.querySelector('.catalog-block');
+
+    catalogLinks.forEach(function(link) {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            catalogBlock.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+    const contactsLinks = document.querySelectorAll('.to-contacts-link');
+    const contactsBlock = document.querySelector('.footer');
+
+    contactsLinks.forEach(function(link) {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            contactsBlock.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+    const deliveryLinks = document.querySelectorAll('.to-delivery-link');
+    const deliveryBlock = document.querySelector('.delivery-block');
+
+    deliveryLinks.forEach(function(link) {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            deliveryBlock.scrollIntoView({ behavior: 'smooth' });
+        });
     });
 });
+
+
+
 
 
 

@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #FBF9FA;
+    width: 100%;
 }
 /* стилі хедера */
 .main-header {
@@ -9,11 +10,17 @@ body {
     justify-content: space-between;
     align-items: center;
     white-space: nowrap;
-    gap: 192px;
-    padding: 16px 76px;
+    padding: 16px 0;
+    padding-left: 76px;
+    padding-right: 76px;
     background-color: #AC2E91;
     font-family: 'PT Sans Caption', sans-serif;
     color: #FBF9FA;
+    position: fixed;
+    width: calc(100% - 152px);
+    top: 0;
+    left: 0;
+    z-index: 2; 
 }
 
 .logo {
@@ -52,11 +59,8 @@ body {
 
 .icons {
     display: flex;
-    margin-left: 90px;
     gap: 26px;
-}
-.icons img {
-    transition: opacity 0.3s ease-out;
+    height: 40px;
 }
 
 /* стилі рухомого рядка знижки */
@@ -77,6 +81,7 @@ body {
     white-space: nowrap;
     width: 100%; 
     overflow: hidden;
+    margin-top: 80px;
 }
 .items {
     display: flex;
@@ -244,6 +249,7 @@ body {
     display: flex;
     gap: 51px;
     align-items: center;
+    padding-bottom: 0px
 }
 .about-us-accent {
     min-width: 8px;
@@ -399,8 +405,8 @@ body {
     flex-direction: column;
     background-color: #CFDF9F;
     padding: 64px 80px 40px 76px;
-    gap: 48px;
     overflow: hidden;
+    position: relative;
 }
 .reviews-block h2{
     font-family: 'Ubuntu', sans-serif;
@@ -408,26 +414,25 @@ body {
     letter-spacing: 2%;
     margin: 0 0 48px 0;
 }
-.reviews-full{
-    display: flex;
-    flex-direction: column;
-    gap: 39px;
-    margin: 0 auto; 
+.cloud-1 {
+    position: absolute;
+    top: 149px;
+    right: 0;
+    z-index: 1;
 }
-.reviews-frame{
-    display: flex;
-    flex-wrap: nowrap;
-    overflow: hidden;
-    width: 100%;
+.cloud-2 {
+    position: absolute;
+    bottom: 34px;
+    left: 0;
+    z-index: 1;
 }
 .reviews-display{
     display: flex;
     flex-direction: column;
     gap: 64px;
-    overflow-x: hidden;
+    overflow: hidden;
     transition: transform 0.3s ease;
 }
-
 .review{
     display: flex;
     flex-direction: row;
@@ -450,38 +455,23 @@ body {
 .review-data img{
     margin: 24px 0;
 }
-.reviews-menu{
-    display: flex;
-    align-items: center;
-    gap: 28px;
-}
-.reviews-menu img {
-    cursor: pointer; 
-    transition: transform 0.3s; 
-}
-.reviews-menu img:hover {
-    transform: scale(1.2); 
-}
-
 
 * {
    margin: 0;
    padding: 0;
 }
-
-.slider {
+.reviews-full {
    width: 100%;
    overflow: hidden;
    background-color: #CFDF9F;
+   position: relative;
 }
-
-.navigation2 {
+.reviews-menu {
     display: flex;
     justify-content: center;
     padding-top: 39px;
 }
-
-.bar {
+.menu-dot {
    width: 16px;
    height: 16px;
    border-radius: 16px;
@@ -490,39 +480,206 @@ body {
    background-color: #0E0C31;
    transition: all 0.4s ease;
 }
-
-.bar:hover {
+.menu-dot:hover {
    transform:scale(1.5);
 }
-
 input[name="r"] {
    position: absolute;
    visibility: hidden;
 }
-
 .slides {
    width: 400%;
    height: 100%;
    display: flex;
 }
-
 .slide {
     display: flex;
     justify-content: center;
    width: 25%;
    transition: all 0.6s ease;
 }
-
 #r1:checked ~ .s1 {
    margin-left: 0;
 }
-
 #r2:checked ~ .s1 {
    margin-left: -25%;
 }
-
 #r3:checked ~ .s1 {
    margin-left: -50%;
 }
 
+/* стилі блоку додати відгук */
+.add-review-block{
+    display: flex;
+    flex-direction: column;
+    padding: 64px 80px 82px 80px;
+    position: relative;
+}
+.add-review-block h2{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 56px;
+}
+.add-review-block img{
+    position: absolute;
+    bottom: 0;
+    right: 28px;
+}
+.fields-frame{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 60px 0;
+    position: relative;
+}
+.fields-frame input[type="text"],
+.fields-frame textarea {
+    padding: 16px 32px;
+    font-family: 'PT Sans Caption', sans-serif;
+    font-size: 28px;
+    border: 2px solid #908E9F;
+    background-color: #FBF9FA;
+    border-radius: 9px;
+    transition: border-color 0.3s ease;
+}
+.fields-frame label {
+    font-family: 'PT Sans Caption', sans-serif;
+    font-size: 24px;
+    color: #908E9F;
+    transition: transform 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+    pointer-events: none;
+    position: absolute;
+    left: 32px;
+    padding: 0 12px;
+}
+.fields-frame label[for="name"] {
+    top: 82px;
+}
+.fields-frame label[for="review"] {
+    top: 187px;
+}
+.fields-frame input[type="text"]:hover,
+.fields-frame textarea:hover {
+    border: 2px solid #AC2E91
+}
+.fields-frame input[type="text"]:is(:focus),
+.fields-frame textarea:is(:focus) {
+    outline-color: #AC2E91;
+}
+.fields-frame input[type="text"]:focus + label,
+.fields-frame textarea:focus + label,
+.fields-frame input[type="text"]:not(:placeholder-shown) + label,
+.fields-frame textarea:not(:placeholder-shown) + label {
+    transform: translateY(-34px);
+    font-size: 18px;
+    background-color: #FBF9FA;
+    color: #AC2E91;
+}
+.fields-frame textarea {
+    min-height: 413px;
+    max-height: 413px; 
+    min-width: calc(100%-80px);
+    max-width: calc(100%-80px);
+}
+.add-review-block button {
+    font-size: 28px;
+    color: #FBF9FA;
+    margin: 0 24px;
+    padding: 24px 48px;
+    background-color: #AC2E91;
+}
+.add-review-block button:hover {
+    background-color: #A8C653;
+}
 
+/* стилы блоку доставки */
+.delivery-block{
+    display: flex;
+    flex-direction: column;
+    background-color: #CFDF9F;
+    padding: 64px 80px 80px 80px;
+    gap: 72px;
+}
+.delivery-block h2{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 56px;
+    margin: 0;
+}
+.delivery-items-frame{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 72px;
+}
+.delivery-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 312px;
+    gap: 32px;
+    padding-bottom: 36px;
+}
+.delivery-item p{
+    font-family: 'Pt Sans', sans-serif;
+    font-size: 28px;
+    margin: 0;
+    text-align: center;
+}
+.number-icon{
+    display: flex;
+    max-width: 164px;
+    max-height: 164px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* стилі футера */
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #AC2E91;
+    padding: 32px 80px 48px 80px;
+    gap: 32px;
+    color: #FBF9FA;
+}
+.footer-inf{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: flex-end;
+}
+.footer-resourses{
+    display: flex;
+    flex-direction: row;
+    width: 760px;
+    justify-content: space-between;
+}
+.footer-category{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-family: 'Pt Sans', sans-serif;
+    font-size: 20px;
+    line-height: 1.7;
+}
+.footer-category h2{
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0px;
+}
+.footer-category-content{
+    display: flex;
+    flex-direction: column;
+}
+.footer-category-content a{
+    text-decoration: none;
+    color: #FBF9FA;
+    width: 179px;
+}
+.footer-category-content a:hover {
+    font-weight: bold; 
+}
+.footer-category-content a.active {
+    color: #FFD964
+}

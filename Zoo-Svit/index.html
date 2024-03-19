@@ -18,26 +18,25 @@
     <title>ZooSvit</title>
 </head>
 <body>
-    <header class="container">
-        <header class="main-header">
-            <div class="logo">
-                <img src="/images/logo.png" alt="ZooSvit Logo" width="50">
-                <span><b>ZooSvit</b></span>
-            </div>
-            <nav class="navigation">
-            <ul>
-                <li><a href="#" class="nav-link">Каталог</a></li>
-                <li><a href="#" class="nav-link">Про нас</a></li>
-                <li><a href="#" class="nav-link">Відгуки</a></li>
-                <li><a href="#" class="nav-link">Контакти</a></li>
-            </ul>
+    <header class="main-header">
+        <div class="logo">
+            <img src="/images/logo.png" alt="ZooSvit Logo" width="50">
+            <span><b>ZooSvit</b></span>
+        </div>
+        <nav class="navigation">
+        <ul>
+            <li><a href="#" class="nav-link to-catalog-link">Каталог</a></li>
+            <li><a href="#" class="nav-link to-category-link">Про нас</a></li>
+            <li><a href="#" class="nav-link to-reviews-link">Відгуки</a></li>
+            <li><a href="#" class="nav-link to-contacts-link">Контакти</a></li>
+        </ul>
         </nav>
-            <div class="icons">
-                <img id="cart-icon" src="/images/cart-icon.png" alt="Cart icon" width="40">
-                <img id="instagram-icon" src="/images/instagram-icon.png" alt="Instagram icon" width="40">
-            </div>
-        </header>
-
+        <div class="icons">
+            <img class="icon" id="cart-icon" src="/images/cart-icon.png" alt="Cart icon" width="40">
+            <img class="icon" id="instagram-icon" src="/images/instagram-icon.png" alt="Instagram icon" width="40">
+        </div>
+    </header>
+    <main>
         <div class="sale-line">
             <div class="items marquee">
               <div class="sale-text">Зимові знижки до 32%</div>
@@ -58,8 +57,6 @@
               
             </div>
         </div>
-    </header>
-    <main>
         <div class="vis-block">
             <div class="vis-block-text">
                 <h1>Порадуй свого улюбленця</h1>
@@ -212,149 +209,173 @@
         </div>
         <div class="reviews-block">
             <h2>Відгуки</h2>
+            <img src="/images/cloud-1.png" alt="" width="256" class="cloud-1">
+            <img src="/images/cloud-2.png" alt=""  width="256" class="cloud-2">
             <div class="reviews-full">
-                <div class="reviews-frame">
-                    <div class="reviews-display">
-                        <div class="review">
-                            <img src="/images/person-photo-1.png" alt="молода жінка">
-                            <div class="review-data">
-                                <p>“Отримала чудове обслуговування в цьому зоомагазині!Зоомагазин рекомендую всім! Великий вибір товарів для улюбленців і дуже привітний персонал.”</p>
-                                <img src="/images/review-stars-5.png" alt="5/5">
-                                <p style="color: #908E9F;">Олена — 19.07.2023</p>
-                            </div>
-                        </div>
-                        <div class="review" style="margin-left: 154px;">
-                            <img src="/images/person-photo-2.png" alt="молодий чоловік">
-                            <div class="review-data">
-                                <p>“Відмінний асортимент якісних товарів для домашніх тварин! Завжди знаходжу все необхідне для свого улюбленця.”</p>
-                                <img src="/images/review-stars-5.png" alt="5/5">
-                                <p style="color: #908E9F;">Артур — 03.02.2023</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="reviews-display" style="margin-left: 400px;">
-                        <div class="review">
-                            <img src="/images/person-photo-3.png" alt="молода жінка">
-                            <div class="review-data">
-                                <p>“Прекрасний сервіс і приємна атмосфера! Дуже задоволена якістю обслуговування і увагою до клієнтів.”</p>
-                                <img src="/images/review-stars-5.png" alt="5/5">
-                                <p style="color: #908E9F;">Катерина — 22.02.2023</p>
-                            </div>
-                        </div>
-                        <div class="review" style="margin: 0 0 0 154px;">
-                            <img src="/images/person-photo-4.png" alt="хлопчик">
-                            <div class="review-data">
-                                <p>“Відмінний асортимент якісних товарів для домашніх тварин! Завжди знаходжу все необхідне для свого улюбленця.”</p>
-                                <img src="/images/review-stars-4.png" alt="4/5">
-                                <p style="color: #908E9F;">Артур — 03.02.2023</p>
-                            </div>
+                <div class="slides">
+                    <input type="radio" name="r" id="r1" checked>
+                    <input type="radio" name="r" id="r2">
+                    <input type="radio" name="r" id="r3">
+                   
+                    <div class="slide s1">
+                        <div class="reviews-display">
+                         <div class="review">
+                             <img src="/images/person-photo-1.png" alt="молода жінка">
+                             <div class="review-data">
+                                 <p>“Отримала чудове обслуговування в цьому зоомагазині!Зоомагазин рекомендую всім! Великий вибір товарів для улюбленців і дуже привітний персонал.”</p>
+                                 <img src="/images/review-stars-5.png" alt="5/5">
+                                 <p style="color: #908E9F;">Олена — 19.07.2023</p>
+                             </div>
+                         </div>
+                         <div class="review" style="margin-left: 154px;">
+                             <img src="/images/person-photo-2.png" alt="молодий чоловік">
+                             <div class="review-data">
+                                 <p>“Відмінний асортимент якісних товарів для домашніх тварин! Завжди знаходжу все необхідне для свого улюбленця.”</p>
+                                 <img src="/images/review-stars-5.png" alt="5/5">
+                                 <p style="color: #908E9F;">Артур — 03.02.2023</p>
+                             </div>
+                         </div>
                         </div>
                     </div>
-                    <div class="reviews-display" style="margin-left: 400px;">
-                        <div class="review">
-                            <img src="/images/person-photo-5.png" alt="молода жінка">
-                            <div class="review-data">
-                                <p>“Прекрасний сервіс і приємна атмосфера! Дуже задоволена якістю обслуговування і увагою до клієнтів.”</p>
-                                <img src="/images/review-stars-5.png" alt="5/5">
-                                <p style="color: #908E9F;">Катерина — 22.02.2023</p>
+                    <div class="slide">
+                            <div class="reviews-display">
+                                <div class="review">
+                                    <img src="/images/person-photo-3.png" alt="молода жінка">
+                                    <div class="review-data">
+                                        <p>“Прекрасний сервіс і приємна атмосфера! Дуже задоволена якістю обслуговування і увагою до клієнтів.”</p>
+                                        <img src="/images/review-stars-5.png" alt="5/5">
+                                        <p style="color: #908E9F;">Катерина — 22.02.2023</p>
+                                    </div>
+                                </div>
+                                <div class="review" style="margin: 0 0 0 154px;">
+                                    <img src="/images/person-photo-4.png" alt="хлопчик">
+                                    <div class="review-data">
+                                        <p>“Відмінний асортимент якісних товарів для домашніх тварин! Завжди знаходжу все необхідне для свого улюбленця.”</p>
+                                        <img src="/images/review-stars-4.png" alt="4/5">
+                                        <p style="color: #908E9F;">Стас — 17.01.2024</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="review" style="margin: 0 0 0 154px;">
-                            <img src="/images/person-photo-6.png" alt="хлопчик">
-                            <div class="review-data">
-                                <p>“Відмінний асортимент якісних товарів для домашніх тварин! Завжди знаходжу все необхідне для свого улюбленця.”</p>
-                                <img src="/images/review-stars-4.png" alt="4/5">
-                                <p style="color: #908E9F;">Артур — 03.02.2023</p>
+                    </div>
+                    <div class="slide">
+                            <div class="reviews-display">
+                                <div class="review">
+                                    <img src="/images/person-photo-5.png" alt="молода жінка">
+                                    <div class="review-data">
+                                        <p>“Чудовий вибір продуктів і аксесуарів для тварин! Якість товарів на високому рівні, а ціни приємно здивували.”</p>
+                                        <img src="/images/review-stars-5.png" alt="5/5">
+                                        <p style="color: #908E9F;">Ольга — 10.09.2023</p>
+                                    </div>
+                                </div>
+                                <div class="review" style="margin: 0 0 0 154px;">
+                                    <img src="/images/person-photo-6.png" alt="молода жінка">
+                                    <div class="review-data">
+                                        <p>“Відмінне обслуговування і доброзичливий персонал! Завжди раді допомогти з вибором і порадити найкращі товари для моїх улюбленців.”</p>
+                                        <img src="/images/review-stars-5.png" alt="5/5">
+                                        <p style="color: #908E9F;">Марія — 15.04.2023</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
                     </div>
                 </div>
                 <div class="reviews-menu">
-                    <img src="/images/menu-arrow1.png" alt="<">
-                    <img src="/images/menu-point-1.png" alt="1/3" style="transform: none; cursor: default;">
-                    <img src="/images/menu-arrow2.png" alt=">">
+                    <label for="r1" class="menu-dot"></label>
+                    <label for="r2" class="menu-dot"></label>
+                    <label for="r3" class="menu-dot"></label>
                 </div>
             </div>
         </div>
-
-
-        <div class="slider middle">
-   <div class="slides">
-      <input type="radio" name="r" id="r1" checked>
-      <input type="radio" name="r" id="r2">
-      <input type="radio" name="r" id="r3">
-      
-      <div class="slide s1">
-        <div class="reviews-display">
-            <div class="review">
-                <img src="/images/person-photo-1.png" alt="молода жінка">
-                <div class="review-data">
-                    <p>“Отримала чудове обслуговування в цьому зоомагазині!Зоомагазин рекомендую всім! Великий вибір товарів для улюбленців і дуже привітний персонал.”</p>
-                    <img src="/images/review-stars-5.png" alt="5/5">
-                    <p style="color: #908E9F;">Олена — 19.07.2023</p>
-                </div>
+        <div class="add-review-block">
+            <h2>Додати відгук:</h2>
+            <div class="fields-frame">
+                <input type="text" id="name" placeholder=" ">
+                <label for="name">Ваше ім'я</label>
+                <textarea id="review" placeholder=" "></textarea>
+                <label for="review">Ваш відгук</label>
             </div>
-            <div class="review" style="margin-left: 154px;">
-                <img src="/images/person-photo-2.png" alt="молодий чоловік">
-                <div class="review-data">
-                    <p>“Відмінний асортимент якісних товарів для домашніх тварин! Завжди знаходжу все необхідне для свого улюбленця.”</p>
-                    <img src="/images/review-stars-5.png" alt="5/5">
-                    <p style="color: #908E9F;">Артур — 03.02.2023</p>
+            <button class="catalog-button">Надіслати</button>
+            <img src="/images/add-review-cat.png" alt="котик">
+        </div>
+        <div class="delivery-block">
+            <h2>Оплата та доставка</h2>
+            <div class="delivery-items-frame">
+                <div class="delivery-item">
+                    <div class="number-icon">
+                        <img src="/images/number-icon1.png" alt="1">
+                    </div>
+                    <p>Ви замовляєте зоотовари через сайт</p>
+                </div>
+                <div class="delivery-item">
+                    <div class="number-icon">
+                        <img src="/images/number-icon2.png" alt="2">
+                    </div>
+                    <p>Оплата карткою Visa, Mastercard або через Приват24</p>
+                </div>
+                <div class="delivery-item">
+                    <div class="number-icon">
+                        <img src="/images/number-icon3.png" alt="3">
+                    </div>
+                    <p>Зворотній зв’язок з менеджером за необхідності</p>
+                </div>
+                <div class="delivery-item">
+                    <div class="number-icon">
+                        <img src="/images/number-icon4.png" alt="4">
+                    </div>
+                    <p>Узгодження готового замовлення з клієнтом</p>
+                </div>
+                <div class="delivery-item">
+                    <div class="number-icon">
+                        <img src="/images/number-icon5.png" alt="5">
+                    </div>
+                    <p>Доставка протягом 4 робочих днів</p>
+                </div>
+                <div class="delivery-item">
+                    <div class="number-icon">
+                        <img src="/images/number-icon6.png" alt="6">
+                    </div>
+                    <p>Ви отримаєте повідомлення про прибуття замовлення</p>
                 </div>
             </div>
         </div>
-      </div>
-      <div class="slide">
-        <div class="reviews-display">
-            <div class="review">
-                <img src="/images/person-photo-3.png" alt="молода жінка">
-                <div class="review-data">
-                    <p>“Прекрасний сервіс і приємна атмосфера! Дуже задоволена якістю обслуговування і увагою до клієнтів.”</p>
-                    <img src="/images/review-stars-5.png" alt="5/5">
-                    <p style="color: #908E9F;">Катерина — 22.02.2023</p>
-                </div>
-            </div>
-            <div class="review" style="margin: 0 0 0 154px;">
-                <img src="/images/person-photo-4.png" alt="хлопчик">
-                <div class="review-data">
-                    <p>“Відмінний асортимент якісних товарів для домашніх тварин! Завжди знаходжу все необхідне для свого улюбленця.”</p>
-                    <img src="/images/review-stars-4.png" alt="4/5">
-                    <p style="color: #908E9F;">Стас — 17.01.2024</p>
-                </div>
-            </div>
-        </div>
-      </div>
-      <div class="slide">
-        <div class="reviews-display">
-            <div class="review">
-                <img src="/images/person-photo-5.png" alt="молода жінка">
-                <div class="review-data">
-                    <p>“Чудовий вибір продуктів і аксесуарів для тварин! Якість товарів на високому рівні, а ціни приємно здивували.”</p>
-                    <img src="/images/review-stars-5.png" alt="5/5">
-                    <p style="color: #908E9F;">Ольга — 10.09.2023</p>
-                </div>
-            </div>
-            <div class="review" style="margin: 0 0 0 154px;">
-                <img src="/images/person-photo-6.png" alt="молода жінка">
-                <div class="review-data">
-                    <p>“Відмінне обслуговування і доброзичливий персонал! Завжди раді допомогти з вибором і порадити найкращі товари для моїх улюбленців.”</p>
-                    <img src="/images/review-stars-5.png" alt="5/5">
-                    <p style="color: #908E9F;">Марія — 15.04.2023</p>
-                </div>
-            </div>
-        </div>
-      </div>
-      
-   </div>
-   <div class="navigation2">
-      <label for="r1" class="bar"></label>
-      <label for="r2" class="bar"></label>
-      <label for="r3" class="bar"></label>
-   </div>
-</div>
-
-
-
     </main>
+    <footer class="footer">
+        <div class="logo">
+            <img src="/images/logo.png" alt="ZooSvit Logo" width="50">
+            <span><b>ZooSvit</b></span>
+        </div>
+        <div class="footer-inf">
+            <div class="footer-resourses">
+                <div class="footer-category">
+                    <h2>Контакти</h2>
+                    <div class="footer-category-content">
+                        <p>(096) 787 65 64 <br>(067) 454 78 78<br>zoosvit@gmail.com</p>
+                    </div>
+                </div>
+                <div class="footer-category">
+                    <h2>Каталог</h2>
+                    <div class="footer-category-content">
+                        <a href="#" class="nav-link to-category-link">Собаки</a>
+                        <a href="#" class="nav-link to-category-link">Коти</a>
+                        <a href="#" class="nav-link to-category-link">Птахи</a>
+                        <a href="#" class="nav-link to-category-link">Гризуни</a>
+                        <a href="#" class="nav-link to-category-link">Риби</a>
+                    </div>                    
+                </div>
+                <div class="footer-category">
+                    <h2>Інформація</h2>
+                    <div class="footer-category-content">
+                        <a href="#" class="nav-link to-catalog-link">Про нас</a>
+                        <a href="#" class="nav-link to-catalog-link">Хіт продажу</a>
+                        <a href="#"class="nav-link to-reviews-link">Відгуки</a>
+                        <a href="#" class="nav-link to-delivery-link">Доставка і оплата</a>
+                    </div>
+                </div>
+            </div>
+            <div class="icons">
+                <img class="icon" id="facebook-icon" src="/images/facebook-icon.png" alt="Facebook icon" width="40">
+                <img class="icon" id="instagram-icon" src="/images/instagram-icon.png" alt="Instagram icon" width="40">
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
