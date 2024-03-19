@@ -347,7 +347,7 @@ body {
     transition: transform 0.3s;
 }
 .catalog-item:hover {
-    transform: scale(1.05); /* Збільшуємо масштаб елементу при наведенні */
+    transform: scale(1.05);
 }
 .photo-text {
     display: flex;
